@@ -70,7 +70,7 @@ func DeleteStudent(c *fiber.Ctx) error {
 
 func UpdateStudent(c *fiber.Ctx) error {
 	id := c.Params("id")
-	var student Student
+	student := new(Student)
 	DB.First(&student, id)
 
 	if student.Course == "" {
