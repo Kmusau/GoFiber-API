@@ -13,6 +13,12 @@ func Routers(app *fiber.App) {
 	app.Post("/student", student.SaveStudent)
 	app.Delete("/student/:id", student.DeleteStudent)
 	app.Put("/student/:id", student.UpdateStudent)
+
+	app.Get("/books", student.GetAllBooks)
+	app.Post("/book", student.AddBook)
+	app.Get("/book/:id", student.GetABook)
+	app.Delete("/book/:id", student.DeleteBook)
+	app.Put("/book/:id", student.UpdateBook)
 }
 
 func main() {

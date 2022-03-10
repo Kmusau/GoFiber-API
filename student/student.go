@@ -27,7 +27,7 @@ func InitialMigration() {
 		fmt.Println(err.Error())
 		panic("Cannot connect to the Database")
 	}
-	DB.AutoMigrate(&Student{})
+	DB.AutoMigrate(&Student{}, &Book{})
 }
 
 //function to find all the students
